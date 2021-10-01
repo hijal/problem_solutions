@@ -11,26 +11,31 @@ void init()
 	int t;
 	cin >> t;
 	while(t--) {
-		int n;
-		cin >> n;
+		int n, k;
+		cin >> k >> n;
+		
+		if(n == 1) {
+			cout << 0 << endl;
+			continue;
+		}
+
 		int a[n];
 
 		for(int i = 0; i < n; i++) {
 			cin >> a[i];
 		}
 
-		int j = 0;
-		for(int i = 0; i < n; i++) {
-			if(i != j and a[i] < 0) {
-				swap(a[i], a[j]);
-				j++;
-			}
-		}
+		sort(a, a + n);
+
+		int result = a[n - 1] - a[0];
 
 		for(int i = 0; i < n; i++) {
-			cout << a[i] << ' ';
+			int choto = min(a[0] + k, a[i] - k);
+			int boro = max(a[i - 1] + k, a[n - 1] - k);
+
+			result = min(result, (boro - choto));
 		}
-		printf("\n");
+		cout << result << endl;
 	}
 }
 int main()
@@ -45,4 +50,4 @@ int main()
 	return 0;
 }
 
-//source: 
+//source: https://practice.geeksforgeeks.org/problems/minimize-the-heights-i/1/

@@ -41,3 +41,5 @@ int main()
 		 
 	return 0;
 }
+
+//Source: https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/

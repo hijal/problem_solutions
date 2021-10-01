@@ -52,3 +52,5 @@ int main()
 		 
 	return 0;
 }
+
+//source: https://practice.geeksforgeeks.org/problems/union-of-two-arrays3538/1

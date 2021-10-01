@@ -38,3 +38,5 @@ int main()
 		 
 	return 0;
 }
+
+//source: https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
